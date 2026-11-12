@@ -144,6 +144,11 @@
   /* ---------- contact form → opens email app ---------- */
   var form = document.getElementById("contact-form");
   if (form) {
+    // pre-tick the service the visitor came from, e.g. contact.html?service=Virtual%20CFO
+    try {
+      var want = new URLSearchParams(window.location.search).get("service");
+      if (want) form.querySelectorAll("input[name=area]").forEach(function (i) { if (i.value === want) i.checked = true; });
+    } catch (err) {}
     form.addEventListener("submit", function (e) {
       e.preventDefault();
       var f = form.elements;

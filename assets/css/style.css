@@ -718,3 +718,21 @@ td .mono { color: var(--text-3); }
 .note { font-size: .84rem; color: var(--text-3); }
 .divider { height: 1px; background: var(--border); margin: 28px 0; border: 0; }
 [hidden] { display: none !important; }
+
+/* ---------- home: services overview ---------- */
+.svc-group { font-size: 1.15rem; margin-bottom: 16px; display: flex; flex-wrap: wrap; align-items: baseline; gap: 6px; }
+.svc-group .muted { font: 400 .88rem/1.4 var(--f-body); }
+.svc { padding: 20px; }
+.svc .ico { width: 40px; height: 40px; margin-bottom: 12px; }
+.svc h3 { font-size: 1.12rem; }
+.svc p { font-size: .9rem; }
+.cta-links { list-style: none; margin: 0; padding: 0; display: grid; gap: 10px; }
+.cta-links a {
+  display: grid; grid-template-columns: 22px 1fr 18px; gap: 14px; align-items: center;
+  padding: 14px 16px; border-radius: 10px; background: rgba(255,255,255,.04); border: 1px solid rgba(255,255,255,.08);
+  color: #e7eeeb; text-decoration: none; transition: border-color .2s, background .2s;
+}
+.cta-links a:hover { border-color: var(--emerald); background: rgba(52,211,153,.08); }
+.cta-links svg { width: 20px; height: 20px; color: var(--emerald); }
+.cta-links b { display: block; font-weight: 600; }
+.cta-links small { color: #a8bbb4; font-size: .84rem; }

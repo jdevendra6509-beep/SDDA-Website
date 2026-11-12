@@ -5,7 +5,7 @@ A static website for SDDA, Chartered Accountants (Mumbai · Pune). It focuses on
 ## Pages
 | File | Page |
 |---|---|
-| `index.html` | Home: Automation Flow hero graphic, focus areas, ERP before/after slider |
+| `index.html` | Home: firm overview, all 11 services (specialised ones link to detail pages, core ones link to Contact with the service pre-ticked) |
 | `internal-audit.html` | Four engagement concepts, nine process areas, RCM result matrix |
 | `automation.html` | Automation examples, Power BI dashboards, Excel & AI training |
 | `erp-solutions.html` | Custom ERP modules, built-in controls, build approach |
