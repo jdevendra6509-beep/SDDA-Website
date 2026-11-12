@@ -736,3 +736,70 @@ td .mono { color: var(--text-3); }
 .cta-links svg { width: 20px; height: 20px; color: var(--emerald); }
 .cta-links b { display: block; font-weight: 600; }
 .cta-links small { color: #a8bbb4; font-size: .84rem; }
+
+/* ---------- home hero: credentials + photo collage ---------- */
+.hero-cred { list-style: none; padding: 0; margin: 26px 0 30px; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 10px; }
+.hero-cred li { padding: 12px 14px; border-radius: 10px; background: rgba(255,255,255,.04); border: 1px solid rgba(255,255,255,.08); min-width: 0; }
+.hero-cred b { display: block; font: 700 1.25rem/1.15 var(--f-head); color: #fff; }
+.hero-cred span { font-size: .8rem; color: #a8bbb4; }
+@media (max-width: 520px) { .hero-cred { grid-template-columns: 1fr; } .hero-cred li { display: flex; align-items: baseline; gap: 10px; } }
+
+.hero-photos { position: relative; display: grid; grid-template-columns: 1.35fr 1fr; grid-template-rows: 1fr 1fr; gap: 12px; min-height: 420px; }
+.hp { margin: 0; border-radius: 14px; overflow: hidden; border: 1px solid rgba(255,255,255,.08); box-shadow: 0 20px 40px -18px rgba(0,0,0,.6); background: var(--slate-700); }
+.hp img { width: 100%; height: 100%; object-fit: cover; transition: transform .6s ease; }
+.hp:hover img { transform: scale(1.04); }
+.hp--main { grid-row: 1 / 3; }
+.hp-badge {
+  position: absolute; display: flex; align-items: center; gap: 10px; padding: 10px 14px; border-radius: 12px;
+  background: rgba(11,21,20,.88); border: 1px solid rgba(52,211,153,.35); backdrop-filter: blur(6px);
+  color: #e7eeeb; box-shadow: 0 12px 30px rgba(0,0,0,.4);
+}
+.hp-badge svg { width: 22px; height: 22px; color: var(--emerald); flex-shrink: 0; }
+.hp-badge b { display: block; font-size: .88rem; }
+.hp-badge small { font-size: .74rem; color: #a8bbb4; }
+.hp-badge--top { top: 18px; left: -14px; }
+.hp-badge--bottom { bottom: 18px; right: 18px; }
+@media (max-width: 999px) { .hp-badge--top { left: 12px; } }
+@media (max-width: 560px) {
+  .hero-photos { min-height: 0; grid-template-columns: 1fr 1fr; grid-template-rows: 200px 120px; }
+  .hp--main { grid-row: 1; grid-column: 1 / 3; }
+  .hp-badge--bottom { display: none; }
+}
+
+/* ---------- who we are ---------- */
+.photo-stack { position: relative; padding: 0 0 48px 0; }
+.ps-main { width: 88%; aspect-ratio: 4 / 3.3; object-fit: cover; border-radius: 16px; box-shadow: var(--shadow); }
+.ps-inset { position: absolute; right: 0; bottom: 0; width: 52%; aspect-ratio: 3 / 2; object-fit: cover; border-radius: 14px; border: 6px solid var(--bg); box-shadow: 0 18px 36px -14px rgba(0,0,0,.35); }
+.values { display: grid; grid-template-columns: 1fr; gap: 12px; margin: 22px 0; }
+@media (min-width: 560px) { .values { grid-template-columns: 1fr 1fr; } }
+.values > div { display: grid; grid-template-columns: 22px 1fr; gap: 10px; font-size: .86rem; color: var(--text-2); }
+.values svg { width: 20px; height: 20px; color: var(--accent); margin-top: 2px; }
+.values b { display: block; color: var(--text); font-size: .93rem; }
+.vm-row { display: grid; gap: 12px; grid-template-columns: 1fr; }
+@media (min-width: 560px) { .vm-row { grid-template-columns: 1fr 1fr; } }
+.vm-row .card { padding: 16px 18px; }
+.vm-row .vm p { font-size: 1.05rem; margin: 0; }
+.vm-row .eyebrow { margin-bottom: 6px; }
+
+/* ---------- photo service cards ---------- */
+.card--photo { padding: 0; overflow: hidden; }
+.card--photo img { width: 100%; aspect-ratio: 16 / 9; object-fit: cover; transition: transform .5s ease; }
+.card--photo:hover img { transform: scale(1.04); }
+.card--photo .cp-body { padding: 20px 22px 22px; display: flex; flex-direction: column; flex: 1; border-top: 3px solid var(--accent); position: relative; background: var(--surface); }
+
+/* ---------- reviews ---------- */
+.review { margin: 0; display: flex; flex-direction: column; gap: 14px; }
+.review .quote { font: 700 3.4rem/0.6 var(--f-head); color: var(--accent); height: 22px; }
+.review blockquote { margin: 0; font-size: 1rem; color: var(--text); flex: 1; }
+.review figcaption { display: flex; align-items: center; gap: 12px; padding-top: 14px; border-top: 1px solid var(--border); }
+.review .avatar { width: 40px; height: 40px; border-radius: 50%; display: grid; place-items: center; background: var(--accent-soft); color: var(--accent); flex-shrink: 0; }
+.review .avatar svg { width: 20px; height: 20px; }
+.review b { display: block; font-size: .92rem; }
+.review small { color: var(--text-3); font-size: .82rem; }
+.review--placeholder { border-style: dashed; box-shadow: none; }
+.review--placeholder blockquote, .review--placeholder b { color: var(--text-3); font-style: italic; }
+
+/* flow graphic on light pages */
+.flow-dark { background: linear-gradient(180deg, var(--slate-900), var(--slate-800)); border-radius: 20px; padding: 34px 18px 18px; }
+.ps-main, .ps-inset, .card--photo img { height: auto; }
+.card--photo img { flex-shrink: 0; }

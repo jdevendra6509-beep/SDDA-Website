@@ -5,7 +5,7 @@ A static website for SDDA, Chartered Accountants (Mumbai · Pune). It focuses on
 ## Pages
 | File | Page |
 |---|---|
-| `index.html` | Home: firm overview, all 11 services (specialised ones link to detail pages, core ones link to Contact with the service pre-ticked) |
+| `index.html` | Home: firm & experience hero with office/AI photos → Who we are → Services → Sectors → Reviews → Contact |
 | `internal-audit.html` | Four engagement concepts, nine process areas, RCM result matrix |
 | `automation.html` | Automation examples, Power BI dashboards, Excel & AI training |
 | `erp-solutions.html` | Custom ERP modules, built-in controls, build approach |
@@ -21,6 +21,8 @@ Open `index.html` in a browser. There is no build step.
 Any static host works: GitHub Pages (Settings → Pages → deploy from branch), Vercel, Netlify or the cPanel of the `sdda.co.in` domain.
 
 ## Notes
+- **Reviews:** the home page has three placeholder review cards (`#reviews` in `index.html`). Replace them with real client reviews, or delete the section. Check ICAI guidelines on testimonials first.
+- **Photos:** `assets/img/photos/` holds free Unsplash stock photos (see `CREDITS.md`). Swap in real office photos using the same file names.
 - The site names no individuals. The full firm name appears only in the copyright line.
 - An ICAI-style disclaimer is shown once per browser session.
 - Light and dark mode follow the device setting and can be switched in the header.

@@ -69,7 +69,60 @@
   </div>
 </section>
 
-<section class="section section--alt" id="examples">
+<section class="section section--alt">
+  <div class="wrap">
+    <div class="split">
+      <div>
+        <span class="eyebrow">See a tool at work</span>
+        <h2>From a purchase invoice to an audited balance sheet</h2>
+        <p class="lead">A typical tool reads the document, validates it against your masters and the law, matches it with the PO, GRN and GSTR-2B, and posts it. Every step is logged, and every exception is flagged.</p>
+        <p class="note">Hover over (or tap) the graphic to run the pipeline. The figures are made up for this example.</p>
+      </div>
+      <div class="flow-dark">
+    <!-- Automation Flow graphic -->
+    <div class="flow" tabindex="0" aria-label="Illustration: a purchase invoice is read, checked and posted into an audited balance sheet. Hover to see the data flow.">
+      <span class="flow-label">Hover to run the pipeline</span>
+
+      <div class="flow-card flow-card--in">
+        <span class="scan"></span>
+        <h4>Purchase invoice <span class="tag">INV/26-27/0917</span></h4>
+        <div class="flow-row"><span>Vendor</span><b>ABC Traders</b></div>
+        <div class="flow-row"><span>Invoice date</span><b>03-Nov-26</b></div>
+        <div class="flow-row"><span>Taxable value</span><b>₹1,00,000</b></div>
+        <div class="flow-row"><span>IGST 18%</span><b>₹18,000</b></div>
+        <div class="flow-row"><span>TDS 194Q</span><b>₹100</b></div>
+        <div class="flow-total"><span>Payable</span><span>₹1,17,900</span></div>
+      </div>
+
+      <div class="flow-pipe" aria-hidden="true">
+        <span class="lane"></span><span class="lane"></span><span class="lane"></span><span class="lane"></span><span class="lane"></span>
+        <span class="node"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="4" width="16" height="16" rx="2"/><rect x="9" y="9" width="6" height="6"/><path d="M9 1v3M15 1v3M9 20v3M15 20v3M20 9h3M20 14h3M1 9h3M1 14h3"/></svg></span>
+      </div>
+
+      <div class="flow-card flow-card--out">
+        <h4>Balance sheet <span class="tag">as at 31-Mar-27</span></h4>
+        <div class="flow-row"><span>Inventory</span><b>₹2,40,18,400</b></div>
+        <div class="flow-row"><span>GST input credit</span><b>₹18,42,600</b></div>
+        <div class="flow-row"><span>Trade payables</span><b>₹38,62,150</b></div>
+        <div class="flow-row"><span>TDS payable</span><b>₹1,24,300</b></div>
+        <div class="flow-row"><span>Bank</span><b>₹1,27,05,900</b></div>
+        <div class="flow-total"><span>Checks passed</span><span>42 / 42</span></div>
+        <span class="stamp"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l8 3v6c0 5-3.4 8.4-8 9-4.6-.6-8-4-8-9V6l8-3z"/><path d="M9 12l2 2 4-4"/></svg> Audited</span>
+      </div>
+
+      <div class="flow-steps" aria-hidden="true">
+        <div class="flow-step"><b>Read</b>PDF → data</div>
+        <div class="flow-step"><b>Validate</b>GSTIN · HSN · TDS</div>
+        <div class="flow-step"><b>Match</b>PO · GRN · 2B</div>
+        <div class="flow-step"><b>Post</b>Ledger · reports</div>
+      </div>
+    </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section section" id="examples">
   <div class="wrap">
     <div class="section-head">
       <span class="eyebrow">01 · Process automation</span>
