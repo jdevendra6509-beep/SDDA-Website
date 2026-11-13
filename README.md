@@ -26,4 +26,5 @@ Any static host works: GitHub Pages (Settings → Pages → deploy from branch),
 - The site names no individuals. The full firm name appears only in the copyright line.
 - An ICAI-style disclaimer is shown once per browser session.
 - Light and dark mode follow the device setting and can be switched in the header.
+- **Brand (from the firm profile PDF):** dark teal `#12524a`, mid green `#3e8549`, lime `#a9ce48`, pale lime `#e4f2b8`, tint `#f3f8e2`. Fonts: DM Serif Display (titles, big numbers) and Source Sans 3 (text). Logo mark: `assets/img/logo-mark.svg`.
 - To change the contact email, edit `data-to` on the form in `contact.html` and the links in each page footer.
