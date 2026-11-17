@@ -5,8 +5,8 @@ All photos are from [Unsplash](https://unsplash.com) and used under the Unsplash
 | File | Unsplash photo ID |
 |---|---|
 | office-glass.jpg | 1497366811353-6870744d04b2 |
-| office-open.jpg | 1556761175-4b46a572b786 |
-| team-meeting.jpg | 1552664730-d307ca884978 |
+| client-meeting.jpg | 1551836022-d5d88e9218df |
+| signing-documents.jpg | 1450101499163-c8848c66ca85 |
 | audit-desk.jpg | 1454165804606-c3d57bc86b40 |
 | dashboard-laptop.jpg | 1460925895917-afdab827c52f |
 | analytics-screen.jpg | 1551288049-bebda4e38f71 |

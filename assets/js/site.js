@@ -189,7 +189,7 @@ const $=s=>document.querySelector(s), $$=s=>[...document.querySelectorAll(s)];
 const bySlug=Object.fromEntries(S.map(s=>[s.slug,s]));
 function card(s){return `<button class="scard" data-cat="${s.cat}" data-go="service-${s.slug}">${s.isNew?'<span class="tag"><span class="new-badge">NEW</span></span>':`<span class="tag">${CATS[s.cat].split(' ')[0]}</span>`}<div class="ic">${I[s.icon]}</div><h3>${s.name}</h3><p>${s.short}</p><span class="more">Explore service →</span></button>`}
 function renderGrid(gridId,filId){
-  $(gridId).innerHTML=S.map(card).join('')+`<div class="scta"><div class="eyebrow">Not sure where to start?</div><h3>Tell us what's slowing you down — we'll suggest the right mix.</h3><div><button class="btn btn-gold" data-go="contact">Talk to us →</button></div></div>`;
+  $(gridId).innerHTML=S.map(card).join('')+`<div class="scta"><div class="eyebrow">Not sure where to start?</div><h3>Tell us what's slowing you down — we'll suggest the right mix.</h3><div><button class="btn btn-gold" data-finder>Find the right service →</button></div></div>`;
   $(filId).innerHTML=Object.entries(CATS).map(([k,v],i)=>`<button data-f="${k}" class="${i?'':'on'}">${v}</button>`).join('');
   $(filId).addEventListener('click',e=>{const b=e.target.closest('button');if(!b)return;
     $$(filId+' button').forEach(x=>x.classList.toggle('on',x===b));
@@ -226,8 +226,8 @@ $('#svcpick').innerHTML=S.map(s=>`<button type="button" data-s="${s.slug}">${s.n
 $('#svcpick').addEventListener('click',e=>{const b=e.target.closest('button');if(b)b.classList.toggle('on')});
 $('#cform').addEventListener('submit',e=>{e.preventDefault();const f=new FormData(e.target);
   const svcs=$$('#svcpick .on').map(b=>b.textContent).join(', ')||'—';
-  const t=`To: shreya.dave@sdda.co.in\nSubject: Enquiry from ${f.get('name')}${f.get('company')?' ('+f.get('company')+')':''}\n\nName: ${f.get('name')}\nCompany: ${f.get('company')||'—'}\nEmail: ${f.get('email')}\nPhone: ${f.get('phone')||'—'}\nServices: ${svcs}\n\n${f.get('msg')||''}`;
-  $('#sentText').textContent=t;{const sub=t.split('\n')[1].replace('Subject: ','');const bod=t.split('\n').slice(3).join('\n');$('#mailBtn').href='mailto:shreya.dave@sdda.co.in?subject='+encodeURIComponent(sub)+'&body='+encodeURIComponent(bod);}$('#sent').style.display='block';$('#sent').scrollIntoView({behavior:'smooth',block:'nearest'})});
+  const t=`To: info@sdda.co.in\nSubject: Enquiry from ${f.get('name')}${f.get('company')?' ('+f.get('company')+')':''}\n\nName: ${f.get('name')}\nCompany: ${f.get('company')||'—'}\nEmail: ${f.get('email')}\nPhone: ${f.get('phone')||'—'}\nServices: ${svcs}\n\n${f.get('msg')||''}`;
+  $('#sentText').textContent=t;{const sub=t.split('\n')[1].replace('Subject: ','');const bod=t.split('\n').slice(3).join('\n');$('#mailBtn').href='mailto:info@sdda.co.in?subject='+encodeURIComponent(sub)+'&body='+encodeURIComponent(bod);}$('#sent').style.display='block';$('#sent').scrollIntoView({behavior:'smooth',block:'nearest'})});
 $('#copyBtn').addEventListener('click',async()=>{try{await navigator.clipboard.writeText($('#sentText').textContent);$('#copyBtn').textContent='Copied ✓'}catch(e){$('#copyBtn').textContent='Select the text above to copy'}});
 
 /* ---------- SERVICE DETAIL ---------- */
@@ -280,7 +280,7 @@ function renderService(slug){
    <div class="blk" id="b-steps"><h2>${s.stepsTitle}</h2><div class="steps">${s.steps.map((st,i)=>`<div class="step${i?'':' on'}"><div class="num">0${i+1}</div><h4>${st[0]}</h4><p>${st[1]}</p></div>`).join('')}</div></div>
    <div class="blk" id="b-deliv"><h2>What you receive</h2><div class="deliv">${s.deliv.map(d=>`<div>${I.check}<span>${d}</span></div>`).join('')}</div>${s.callout?`<div class="callout" style="margin-top:22px">${s.callout}</div>`:''}</div>
    <div class="blk" id="b-faq"><h2>Frequently asked questions</h2>${acc(s.faq.map(f=>[f[0],f[1]]))}</div>
-   <div class="cta-band"><div><h3>Discuss ${s.name.toLowerCase().includes('erp')?'your ERP':'this service'} with us</h3><p>The first conversation costs nothing. We'll come back with a written scope.</p></div><div style="display:flex;gap:10px;flex-wrap:wrap"><button class="btn btn-gold" data-go="contact" data-pre="${s.slug}">Get in touch →</button><button class="btn btn-ghost" style="color:#fff" data-go="service-${next.slug}">Next: ${next.name}</button></div></div>
+   <div class="cta-band"><div><h3>Discuss ${s.name.toLowerCase().includes('erp')?'your ERP':'this service'} with us</h3><p>Tell us what you need and we'll come back with a written scope.</p></div><div style="display:flex;gap:10px;flex-wrap:wrap"><button class="btn btn-gold" data-go="contact" data-pre="${s.slug}">Get in touch →</button><button class="btn btn-ghost" style="color:#fff" data-go="service-${next.slug}">Next: ${next.name}</button></div></div>
   </div></div>`;
  initWidget(s);bindAcc();bindToc();
 }
@@ -379,6 +379,11 @@ document.addEventListener('click',e=>{const g=e.target.closest('[data-go]');if(!
  const opt=g.dataset.pre?{pre:g.dataset.pre}:undefined;go(g.dataset.go,opt)});
 window.addEventListener('hashchange',()=>render(location.hash.slice(1)));
 window.addEventListener('popstate',()=>render(location.hash.slice(1)));
+document.addEventListener('click',e=>{if(!e.target.closest('[data-finder]'))return;e.preventDefault();
+ const toFinder=()=>document.getElementById('finder').scrollIntoView({behavior:'smooth'});
+ if(!$('#v-home').classList.contains('active')){go('home');setTimeout(toFinder,80)}else toFinder()});
+/* service cards: spotlight follows the cursor */
+document.addEventListener('pointermove',e=>{const c=e.target.closest&&e.target.closest('.scard');if(!c)return;const r=c.getBoundingClientRect();c.style.setProperty('--mx',(e.clientX-r.left)+'px');c.style.setProperty('--my',(e.clientY-r.top)+'px')},{passive:true});
 $('#burger').onclick=()=>$('#navlinks').classList.toggle('open');
 
 /* reveal + counters */
