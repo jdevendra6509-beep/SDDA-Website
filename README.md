@@ -1,30 +1,25 @@
-# SDDA — Firm website
+# Shreya D. Dave & Associates — Firm website
 
-A static website for SDDA, Chartered Accountants (Mumbai · Pune). It focuses on **Internal Audit**, **Process Automation** and **Custom ERP tools**.
+Static website for the firm (Chartered Accountants, Mumbai · Pune). There is no build step: open `index.html` in a browser, or deploy the folder to any static host (Vercel, GitHub Pages, Netlify, cPanel).
 
-## Pages
-| File | Page |
+## How it is organised
+The whole site is one page, `index.html`, with views switched by the address `#`:
+
+| Address | View |
 |---|---|
-| `index.html` | Home: firm & experience hero with office/AI photos → Who we are → Services → Sectors → Reviews → Contact |
-| `internal-audit.html` | Four engagement concepts, nine process areas, RCM result matrix |
-| `automation.html` | Automation examples, Power BI dashboards, Excel & AI training |
-| `erp-solutions.html` | Custom ERP modules, built-in controls, build approach |
-| `about.html` | Firm profile, vision & mission, all services |
-| `contact.html` | Enquiry form (opens the visitor's email app) and office details |
+| `index.html` or `#home` | Home: hero with office / AI photos, who we are, services, how we work, what sets us apart, service finder, ways to engage, industries & systems, reviews |
+| `#services` | All services, with category filters |
+| `#service-<slug>` | Detail page for one service (`internal-audit`, `automation`, `custom-erp`, `accounting`, `tax`, `statutory-audit`, `virtual-cfo`, `startup-advisory`, `roc`, `trainings`) |
+| `#about` | About the firm |
+| `#contact` | Contact form (prepares the enquiry; opens the email app or copies the text) |
 
-Shared files: `assets/css/style.css`, `assets/js/main.js`, `assets/img/favicon.svg`.
+Files:
+- `assets/css/site.css`: all styles (theme colours are at the top: `--g900`, `--g800`, `--lime`, `--gold`, `--cream`, …)
+- `assets/js/site.js`: service content (the `S` list), interactive widgets and the page router
+- `assets/img/photos/`: photos (free Unsplash stock; see `CREDITS.md`). Replace with real office photos using the same file names.
+- `internal-audit.html`, `automation.html`, `erp-solutions.html`, `about.html`, `contact.html`: forward old links to the matching view
 
-## Run locally
-Open `index.html` in a browser. There is no build step.
-
-## Publish
-Any static host works: GitHub Pages (Settings → Pages → deploy from branch), Vercel, Netlify or the cPanel of the `sdda.co.in` domain.
-
-## Notes
-- **Reviews:** the home page has three placeholder review cards (`#reviews` in `index.html`). Replace them with real client reviews, or delete the section. Check ICAI guidelines on testimonials first.
-- **Photos:** `assets/img/photos/` holds free Unsplash stock photos (see `CREDITS.md`). Swap in real office photos using the same file names.
-- The site names no individuals. The full firm name appears only in the copyright line.
-- An ICAI-style disclaimer is shown once per browser session.
-- Light and dark mode follow the device setting and can be switched in the header.
-- **Brand (from the firm profile PDF):** dark teal `#12524a`, mid green `#3e8549`, lime `#a9ce48`, pale lime `#e4f2b8`, tint `#f3f8e2`. Fonts: DM Serif Display (titles, big numbers) and Source Sans 3 (text). Logo mark: `assets/img/logo-mark.svg`.
-- To change the contact email, edit `data-to` on the form in `contact.html` and the links in each page footer.
+## Editing content
+- Service text, scope, steps, deliverables and FAQs are in the `S` list at the top of `assets/js/site.js`.
+- **Reviews:** the home page has three placeholder review cards (search `REVIEWS` in `index.html`). Replace them with real client reviews (with permission), or delete the section. Check ICAI guidelines on testimonials first.
+- An ICAI disclaimer is shown once per browser session (`#disclaimer` in `index.html`).

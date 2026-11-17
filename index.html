@@ -1,279 +1,275 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en-IN">
 <head>
-<meta charset="utf-8">
+<meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>SDDA · Internal Audit, Automation & Custom ERP</title>
-<meta name="description" content="Chartered accountants in Mumbai and Pune. Internal audit that tests every transaction, process automation, and custom ERP tools built around your controls.">
-<meta name="theme-color" content="#12524a">
+<title>Shreya D. Dave &amp; Associates — Chartered Accountants</title>
+<meta name="description" content="Chartered Accountants in Mumbai and Pune: accounting, tax, audit and compliance, with specialised practices in internal audit, process automation and custom ERP software.">
+<meta name="theme-color" content="#0f3b2e">
 <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&amp;family=Source+Code+Pro:wght@400;500;600&amp;family=Source+Sans+3:ital,wght@0,400;0,600;0,700;1,400&amp;display=swap" rel="stylesheet">
-<link rel="stylesheet" href="assets/css/style.css">
-<script>try{var t=localStorage.getItem("sdda-theme");if(t==="light"||t==="dark")document.documentElement.setAttribute("data-theme",t)}catch(e){}</script>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&amp;family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/site.css">
 </head>
 <body>
-<a class="sr-only" href="#main">Skip to content</a>
-<header class="site-header">
+<div class="progress" id="progress"></div>
+
+<header id="hdr">
   <div class="wrap nav">
-    <button class="icon-btn menu-btn" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="nav-links"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 6h16M4 12h16M4 18h16"/></svg></button>
-    <a class="brand" href="index.html" aria-label="SDDA home">
-      <svg class="brand-mark" viewBox="0 0 179 253" aria-hidden="true"><path d="M0 0H116L179 126.5L116 253H0Z" fill="#12524a"/><path d="M0 0H99L162 126.5L99 253H0Z" fill="#3e8549"/><path d="M0 0H79L142 126.5L79 253H0Z" fill="#e4f2b8"/><path d="M0 0H69L132 126.5L69 253H0Z" fill="#a9ce48"/></svg>
-      <span class="brand-text"><span class="brand-name">SDDA</span><span class="brand-sub">Chartered Accountants</span></span>
+    <a class="brand" data-go="home" aria-label="SDDA home">
+      <svg width="46" height="38" viewBox="0 0 92 76"><path d="M4 4l22 34L4 72h16l22-34L20 4z" fill="#0f5a4a"/><path d="M28 4l22 34-22 34h16l22-34L44 4z" fill="#3f9a5c"/><path d="M52 4l22 34-22 34h16l22-34L68 4z" fill="#9cc63b"/></svg>
+      <div class="brand-t"><b>Shreya D. Dave & Associates</b><span>Chartered Accountants</span></div>
     </a>
-    <ul class="nav-links" id="nav-links">
-        <li><a href="index.html" aria-current="page">Home</a></li>
-        <li><a href="index.html#services">Services</a></li>
-        <li><a href="internal-audit.html">Internal Audit</a></li>
-        <li><a href="automation.html">Automation</a></li>
-        <li><a href="erp-solutions.html">Custom ERP</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="contact.html">Contact</a></li>
-        <li class="nav-links-cta"><a href="contact.html">Discuss a process</a></li>
-    </ul>
-    <div class="nav-actions">
-      <button class="icon-btn theme-toggle" type="button" aria-label="Switch light or dark mode"><svg class="i-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.8A9 9 0 1111.2 3a7 7 0 009.8 9.8z"/></svg><svg class="i-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg></button>
-      <a class="btn btn--primary nav-cta" href="contact.html">Discuss a process</a>
-    </div>
+    <button class="burger" id="burger" aria-label="Menu"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#14513d" stroke-width="2.2" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg></button>
+    <nav class="navlinks" id="navlinks">
+      <a data-go="home">Home</a>
+      <div class="dd"><a data-go="services">Services ▾</a><div class="ddmenu" id="ddmenu"></div></div>
+      <a data-go="about">About</a>
+      <a data-go="contact">Contact</a>
+      <a class="btn btn-primary" data-go="contact" style="margin-left:8px;color:#fff">Book a conversation</a>
+    </nav>
   </div>
-  <div class="nav-scrim"></div>
 </header>
-<main id="main">
-<section class="hero">
-  <div class="wrap hero-grid">
-    <div>
-      <span class="eyebrow">Chartered Accountants · Est. 2022 · Mumbai · Pune</span>
-      <h1>Big-firm experience. <em>Personal attention.</em></h1>
-      <p class="lead">SDDA is a firm of Chartered Accountants led by partners with more than 12 years in internal audit, risk consulting and financial controls at KPMG, EY and British Petroleum. We bring that experience to growing businesses, from the books and tax filings to controls, automation and AI-driven tools.</p>
-      <ul class="hero-cred">
-        <li><b>12+ yrs</b><span>in risk, audit &amp; controls</span></li>
-        <li><b>KPMG · EY · BP</b><span>partners' background</span></li>
-        <li><b>4 countries</b><span>India, Vietnam, Russia, Malaysia</span></li>
-      </ul>
-      <div class="btn-row">
-        <a class="btn btn--light" href="#who-we-are">About the firm <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
-        <a class="btn btn--outline-light" href="contact.html">Get in touch</a>
-      </div>
-    </div>
 
-    <div class="hero-photos">
-      <figure class="hp hp--main"><img src="assets/img/photos/office-glass.jpg" alt="A bright, modern office with a meeting table" width="1200" height="801" fetchpriority="high"></figure>
-      <figure class="hp hp--a"><img src="assets/img/photos/ai-robot.jpg" alt="A humanoid robot, representing AI and robotic automation" width="800" height="533" loading="lazy"></figure>
-      <figure class="hp hp--b"><img src="assets/img/photos/dashboard-laptop.jpg" alt="A laptop showing a financial dashboard" width="900" height="641" loading="lazy"></figure>
-      <div class="hp-badge hp-badge--top"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="4" width="16" height="16" rx="2"/><rect x="9" y="9" width="6" height="6"/><path d="M9 1v3M15 1v3M9 20v3M15 20v3M20 9h3M20 14h3M1 9h3M1 14h3"/></svg><span><b>AI &amp; automation</b><small>Excel, Python, Power BI, custom ERP</small></span></div>
-      <div class="hp-badge hp-badge--bottom"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l8 3v6c0 5-3.4 8.4-8 9-4.6-.6-8-4-8-9V6l8-3z"/><path d="M9 12l2 2 4-4"/></svg><span><b>Controls first</b><small>Every transaction tested</small></span></div>
-    </div>
-  </div>
-</section>
-
-<section class="section--tight">
-  <div class="wrap stats-band">
-    <div class="stats">
-      <div class="stat"><div class="stat-num">2022</div><div class="stat-label">Year the firm was established</div></div>
-      <div class="stat"><div class="stat-num">12+ yrs</div><div class="stat-label">Partners' experience in risk &amp; controls</div></div>
-      <div class="stat"><div class="stat-num">11</div><div class="stat-label">Services across finance, compliance and automation</div></div>
-      <div class="stat"><div class="stat-num">8</div><div class="stat-label">Industries served, from logistics to petroleum</div></div>
-    </div>
-  </div>
-</section>
-
-<!-- WHO WE ARE -->
-<section class="section" id="who-we-are">
-  <div class="wrap">
-    <div class="split">
-      <div class="photo-stack">
-        <img class="ps-main" src="assets/img/photos/office-open.jpg" alt="An open-plan office with people at work" width="1200" height="900" loading="lazy">
-        <img class="ps-inset" src="assets/img/photos/team-meeting.jpg" alt="A team discussing a project at a whiteboard" width="1000" height="667" loading="lazy">
-      </div>
+<main>
+<!-- ================= HOME ================= -->
+<div class="view" id="v-home">
+  <section class="hero">
+    <div class="wrap hero-grid">
       <div>
-        <span class="eyebrow">Who we are</span>
-        <h2>Enterprise-grade controls, with a partner's attention</h2>
-        <p>SDDA is a firm of Chartered Accountants established in 2022, with offices in Mumbai and Pune. Our partners have spent more than a decade in internal audit, risk consulting and financial controls at KPMG, EY and British Petroleum. They have led multi-location, multi-process reviews across India, Vietnam, Russia and Malaysia.</p>
-        <p>We started the firm on a simple belief: every business, whatever its size, deserves strong controls, decision-ready reporting and smooth compliance. Our team of Chartered Accountants, Company Secretaries, MBAs and Excel &amp; automation specialists understands both the numbers and the business behind them.</p>
-        <div class="values">
-          <div><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15.3 15.3 0 014 10 15.3 15.3 0 01-4 10 15.3 15.3 0 01-4-10 15.3 15.3 0 014-10z"/></svg><span><b>Enterprise-grade expertise</b>Global experience, applied practically</span></div>
-          <div><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l8 3v6c0 5-3.4 8.4-8 9-4.6-.6-8-4-8-9V6l8-3z"/><path d="M9 12l2 2 4-4"/></svg><span><b>Controls-first thinking</b>We fix root causes, not just numbers</span></div>
-          <div><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg><span><b>Automation by default</b>Every repeat task can become a tool</span></div>
-          <div><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M11 12h2a2 2 0 100-4h-3c-.6 0-1.1.2-1.4.6L3 14"/><path d="M7 18l1.6-1.4c.3-.4.8-.6 1.4-.6h4c1.1 0 2.1-.4 2.8-1.2l4.6-4.4a2 2 0 00-2.8-2.9l-4.2 3.9M2 13l6 6"/></svg><span><b>Partner, not vendor</b>We own outcomes with your team</span></div>
-          <div><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 3"/></svg><span><b>On time, every time</b>Trackers keep deadlines visible</span></div>
-          <div><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="11" width="16" height="10" rx="2"/><path d="M8 11V7a4 4 0 018 0v4"/></svg><span><b>Integrity &amp; confidentiality</b>Your data handled with discretion</span></div>
-        </div>
-        <div class="vm-row">
-          <div class="card vm"><span class="eyebrow">Our vision</span><p>To help founders and leadership teams build and scale with confidence.</p></div>
-          <div class="card vm"><span class="eyebrow">Our mission</span><p>To bring clarity, control and efficiency to every business we serve.</p></div>
+        <div class="eyebrow">Chartered Accountants · Mumbai · Pune</div>
+        <h1 style="margin-top:16px">Partnering with business, so you can focus on <em>building it.</em></h1>
+        <p class="lead">Enterprise-grade controls, decision-ready reporting and seamless compliance — with the personal attention of a partner who understands your business. We take care of your <span class="rotator" id="rot">finance</span>.</p>
+        <div class="hero-cta">
+          <button class="btn btn-primary" data-go="services">Explore our services →</button>
+          <button class="btn btn-ghost" style="color:var(--g800)" onclick="document.getElementById('finder').scrollIntoView({behavior:'smooth'})">Find the right service</button>
         </div>
       </div>
-    </div>
-  </div>
-</section>
-
-<!-- SERVICES -->
-<section class="section section--alt" id="services">
-  <div class="wrap">
-    <div class="section-head">
-      <span class="eyebrow">Our services</span>
-      <h2>Everything your finance function needs, under one roof</h2>
-      <p class="lead">Our specialised practices go deep on controls and technology. Our core practice covers the accounting, tax and compliance work every business needs.</p>
-    </div>
-
-    <h3 class="svc-group">Specialised services <span class="muted">· open a page for full details</span></h3>
-    <div class="grid grid-3">
-      <a class="card card--link card--photo" href="internal-audit.html">
-        <img src="assets/img/photos/audit-desk.jpg" alt="" width="900" height="601" loading="lazy">
-        <div class="cp-body">
-          <h3>Internal Audit &amp; Risk Consulting</h3>
-          <p>Internal audit that tests every transaction, not a sample. We also cover due diligence, process reviews, SOP / RCM and IFC / ICFR / SOX testing.</p>
-          <span class="more">View in detail <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+      <div class="hero-visual">
+        <div class="hero-photos">
+          <figure class="hp hp-main"><img src="assets/img/photos/office-glass.jpg" alt="A bright, modern office with a meeting table" width="1200" height="801" fetchpriority="high"></figure>
+          <figure class="hp hp-ai"><img src="assets/img/photos/ai-robot.jpg" alt="A humanoid robot, representing AI and automation" width="800" height="533" loading="lazy"></figure>
+          <figure class="hp hp-dash"><img src="assets/img/photos/dashboard-laptop.jpg" alt="A laptop showing a finance dashboard" width="900" height="641" loading="lazy"></figure>
+          <svg class="chev-mark" viewBox="0 0 92 76" aria-hidden="true"><path d="M4 4l22 34L4 72h16l22-34L20 4z" fill="#0f5a4a"/><path d="M28 4l22 34-22 34h16l22-34L44 4z" fill="#3f9a5c"/><path d="M52 4l22 34-22 34h16l22-34L68 4z" fill="#9cc63b"/></svg>
         </div>
-      </a>
-      <a class="card card--link card--photo" href="automation.html">
-        <img src="assets/img/photos/robot-hand.jpg" alt="" width="900" height="648" loading="lazy">
-        <div class="cp-body">
-          <h3>Process Automation, AI &amp; Analytics</h3>
-          <p>Excel, VBA, Power Query and Python tools, AI-assisted workflows and Power BI dashboards that cut manual work in finance and operations.</p>
-          <span class="more">View in detail <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+        <div class="float f1"><b>KPMG · EY · BP</b>12+ years in risk,<br>audit &amp; controls</div>
+        <div class="float f2"><b>CA · CS · MBA</b>one team, numbers<br>and business</div>
+        <div class="float f3"><b>AI &amp; automation</b>Excel · Python · Power BI<br>custom ERP</div>
+      </div>
+    </div>
+  </section>
+  <div class="ticker"><div class="ticker-inner" id="ticker"></div></div>
+
+  <section>
+    <div class="wrap intro-grid">
+      <div class="reveal">
+        <div class="eyebrow">Who we are</div>
+        <h2 style="font-size:clamp(28px,3.4vw,40px);margin:10px 0 16px">A Chartered Accountancy firm built for growing businesses.</h2>
+        <p style="color:#33433b;font-size:16.5px;margin-bottom:14px">Shreya D. Dave & Associates brings together Chartered Accountants, Company Secretaries, MBAs and Excel & automation specialists. Every engagement is handled by people who understand both the numbers and the business behind them.</p>
+        <p style="color:#33433b;font-size:16.5px;margin-bottom:24px">We work as an extension of your team — keeping your books, compliance and controls in order, and turning repetitive work into tools your team can run.</p>
+        <button class="btn btn-primary" data-go="about">About the firm →</button>
+        <div class="intro-photos">
+          <img src="assets/img/photos/office-open.jpg" alt="An open-plan office with people at work" width="1200" height="900" loading="lazy">
+          <img src="assets/img/photos/team-meeting.jpg" alt="A team discussing a project at a whiteboard" width="1000" height="667" loading="lazy">
         </div>
-      </a>
-      <a class="card card--link card--photo" href="erp-solutions.html">
-        <img src="assets/img/photos/analytics-screen.jpg" alt="" width="900" height="600" loading="lazy">
-        <div class="cp-body">
-          <h3>Custom ERP Tools</h3>
-          <p>End-to-end web-based software built around your process, with approvals, limits and audit trail built in from the first screen.</p>
-          <span class="more">View in detail <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
-        </div>
-      </a>
+      </div>
+      <div class="stats reveal">
+        <div class="stat"><b data-count="12">0</b><span>years of founder experience in risk, audit & controls</span></div>
+        <div class="stat"><b data-count="10">0</b><span>service lines under one roof</span></div>
+        <div class="stat"><b data-count="2">0</b><span>offices — Mumbai and Pune</span></div>
+        <div class="stat"><b>1</b><span>point of contact for finance, compliance and automation</span></div>
+      </div>
     </div>
+  </section>
 
-    <h3 class="svc-group mt-4">Core practice <span class="muted">· click a service to enquire</span></h3>
-    <div class="grid grid-4">
-      <a class="card card--link svc" href="contact.html?service=Accounting"><span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 19.5A2.5 2.5 0 016.5 17H20V2H6.5A2.5 2.5 0 004 4.5v15z"/><path d="M4 19.5A2.5 2.5 0 006.5 22H20v-5"/></svg></span><h3>Accounting (Indian &amp; foreign)</h3><p>Bookkeeping, reconciliations, MIS and finalisation for Indian entities and overseas books.</p><span class="more">Enquire <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></a>
-      <a class="card card--link svc" href="contact.html?service=Tax"><span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 3H6a2 2 0 00-2 2v14a2 2 0 002 2h12a2 2 0 002-2V9l-6-6z"/><path d="M14 3v6h6M8 13h8M8 17h5"/></svg></span><h3>Direct &amp; indirect tax</h3><p>Income tax, TDS, advance tax, GST returns and reconciliations, filed on time.</p><span class="more">Enquire <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></a>
-      <a class="card card--link svc" href="contact.html?service=Statutory%20Audit"><span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3"/></svg></span><h3>Statutory audit</h3><p>Independent audits with a sharp eye on controls and practical recommendations.</p><span class="more">Enquire <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></a>
-      <a class="card card--link svc" href="contact.html?service=Virtual%20CFO"><span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 3v18h18"/><path d="M7 15l4-4 3 3 5-6"/></svg></span><h3>Virtual CFO</h3><p>Budgeting, cash flow, MIS reviews and board-ready reporting, without a full-time hire.</p><span class="more">Enquire <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></a>
-      <a class="card card--link svc" href="contact.html?service=ROC%20Compliance"><span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="2" width="16" height="20" rx="2"/><path d="M9 22v-4h6v4M8 6h.01M16 6h.01M12 6h.01M12 10h.01M12 14h.01M16 10h.01M16 14h.01M8 10h.01M8 14h.01"/></svg></span><h3>ROC compliance</h3><p>Annual filings, event-based MCA forms, board and AGM documents and statutory registers.</p><span class="more">Enquire <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></a>
-      <a class="card card--link svc" href="contact.html?service=Startup%20Advisory"><span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4.5 16.5c-1.5 1.3-2 5-2 5s3.7-.5 5-2c.7-.8.7-2.1-.1-2.9a2.2 2.2 0 00-2.9-.1z"/><path d="M12 15l-3-3a22 22 0 012-4A12.9 12.9 0 0122 2c0 2.7-.8 7.5-6 11a22.4 22.4 0 01-4 2z"/><path d="M9 12H4s.6-3 2-4c1.6-1.1 5 0 5 0M12 15v5s3-.6 4-2c1.1-1.6 0-5 0-5"/></svg></span><h3>Startup advisory</h3><p>Entity set-up, registrations, a compliance calendar and finance foundations for founders.</p><span class="more">Enquire <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></a>
-      <a class="card card--link svc" href="automation.html#training"><span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 10L12 5 2 10l10 5 10-5z"/><path d="M6 12v5c3 2 9 2 12 0v-5"/></svg></span><h3>Excel &amp; AI training</h3><p>Practical workshops at three levels that help teams work faster with Excel and AI tools.</p><span class="more">View training levels <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></a>
-      <a class="card card--link svc" href="contact.html?service=Unclaimed%20Asset%20Recovery"><span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="8" cy="8" r="6"/><path d="M18.1 10.4A6 6 0 1110.3 18M7 6h1v4M16.7 13.9l.7.7-2.8 2.8"/></svg></span><h3>Unclaimed asset recovery</h3><p>Recovery of unclaimed shares and dividends from IEPF, from paperwork to final credit.</p><span class="more">Enquire <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></a>
+  <section style="padding-top:0">
+    <div class="wrap">
+      <div class="sec-head reveal"><div class="eyebrow">What we do</div><h2>Finance, compliance and automation — handled end to end.</h2><p>Pick a category, or open any service to see exactly what is covered, how we work and what you receive.</p></div>
+      <div class="filters reveal" id="filters"></div>
+      <div class="sgrid" id="sgrid"></div>
     </div>
-  </div>
-</section>
+  </section>
 
-<!-- SECTORS -->
-<section class="section" id="sectors">
-  <div class="wrap">
-    <div class="section-head">
-      <span class="eyebrow">Sectors</span>
-      <h2>Industries we have worked in</h2>
-      <p class="lead">Our risk libraries and checklists are built from review work across these sectors.</p>
+  <section style="padding-top:0">
+    <div class="wrap">
+      <div class="sec-head reveal"><div class="eyebrow">How we work with you</div><h2>One partner, one rhythm.</h2><p>Whatever the service, every engagement follows the same disciplined cycle — so you always know what is happening and what comes next.</p></div>
+      <div class="steps reveal" id="homeSteps">
+        <div class="step on"><div class="num">01</div><h4>Understand</h4><p>We learn how your business and processes actually run — not how the manual says they run.</p></div>
+        <div class="step"><div class="num">02</div><h4>Plan</h4><p>Scope, timelines, responsibilities and a tracker agreed upfront, with every deadline visible.</p></div>
+        <div class="step"><div class="num">03</div><h4>Deliver</h4><p>Work executed by specialists and reviewed by a senior before anything reaches you.</p></div>
+        <div class="step"><div class="num">04</div><h4>Review</h4><p>Regular check-ins on findings, numbers and status — in plain language you can act on.</p></div>
+        <div class="step"><div class="num">05</div><h4>Improve</h4><p>Root causes fixed and repeat work automated, so each cycle runs better than the last.</p></div>
+      </div>
     </div>
-    <div class="industries">
-      <div class="industry"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M1 3h15v13H1zM16 8h4l3 3v5h-7"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg> Logistics</div>
-      <div class="industry"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 10L12 5 2 10l10 5 10-5z"/><path d="M6 12v5c3 2 9 2 12 0v-5"/></svg> Education</div>
-      <div class="industry"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="2" width="20" height="20" rx="2"/><path d="M7 2v20M17 2v20M2 12h20M2 7h5M2 17h5M17 17h5M17 7h5"/></svg> Media</div>
-      <div class="industry"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.7 13.4a2 2 0 002 1.6h9.7a2 2 0 002-1.6L23 6H6"/></svg> FMCG</div>
-      <div class="industry"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2.7l5.7 5.6a8 8 0 11-11.4 0z"/></svg> Petroleum</div>
-      <div class="industry"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 20V8l6 4V8l6 4V4h4l2 16H2z"/></svg> Manufacturing</div>
-      <div class="industry"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 9l1-5h16l1 5M3 9v11h18V9M3 9h18M9 20v-6h6v6"/></svg> Retail</div>
-      <div class="industry"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M16 3l4 4-4 4M20 7H4M8 21l-4-4 4-4M4 17h16"/></svg> Trading</div>
-    </div>
-  </div>
-</section>
+  </section>
 
-<!-- REVIEWS
-     Replace each placeholder with a real client review (quote, name or role, company type).
-     Do not publish made-up reviews. Check ICAI guidelines on testimonials before going live. -->
-<section class="section section--alt" id="reviews">
-  <div class="wrap">
-    <div class="section-head">
-      <span class="eyebrow">Reviews</span>
-      <h2>What our clients say</h2>
+  <section class="dark">
+    <div class="wrap">
+      <div class="sec-head reveal"><div class="eyebrow">What sets us apart</div><h2>Enterprise-grade rigour. Owner-managed attention.</h2><p>Every engagement is handled by people who understand both the numbers and the business behind them.</p></div>
+      <div class="apart" id="apart"></div>
     </div>
-    <div class="grid grid-3">
-      <figure class="card review review--placeholder">
-        <span class="quote" aria-hidden="true">“</span>
-        <blockquote>[Client review to be added: for example, about an internal audit engagement.]</blockquote>
-        <figcaption><span class="avatar"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="8" r="4"/><path d="M4 21a8 8 0 0116 0"/></svg></span><span><b>[Client name / role]</b><small>[Industry · City]</small></span></figcaption>
-      </figure>
-      <figure class="card review review--placeholder">
-        <span class="quote" aria-hidden="true">“</span>
-        <blockquote>[Client review to be added: for example, about an automation tool or dashboard.]</blockquote>
-        <figcaption><span class="avatar"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="8" r="4"/><path d="M4 21a8 8 0 0116 0"/></svg></span><span><b>[Client name / role]</b><small>[Industry · City]</small></span></figcaption>
-      </figure>
-      <figure class="card review review--placeholder">
-        <span class="quote" aria-hidden="true">“</span>
-        <blockquote>[Client review to be added: for example, about a custom ERP build.]</blockquote>
-        <figcaption><span class="avatar"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="8" r="4"/><path d="M4 21a8 8 0 0116 0"/></svg></span><span><b>[Client name / role]</b><small>[Industry · City]</small></span></figcaption>
-      </figure>
-    </div>
-  </div>
-</section>
+  </section>
 
-<section class="section--tight" style="padding:72px 0">
-  <div class="wrap">
-    <div class="cta">
-      <div class="cta-grid">
+  <section id="finder">
+    <div class="wrap">
+      <div class="quiz reveal">
         <div>
-          <span class="eyebrow" style="color:var(--lime)">Next step</span>
-          <h2>Want the detail, or ready to talk?</h2>
-          <p>Each specialised service has its own page with scope, method and examples. If you already know what you need, send us a note and we'll get back to you.</p>
-          <div class="btn-row mt-3">
-            <a class="btn btn--light" href="contact.html">Contact us <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
-          </div>
+          <div class="eyebrow">Service finder</div>
+          <h2 style="font-size:34px;margin:10px 0 12px">What's on your mind right now?</h2>
+          <p style="color:var(--mute);margin-bottom:22px">Choose what sounds most like you — we'll point you to where we can help first.</p>
+          <div class="qopts" id="qopts"></div>
         </div>
-        <ul class="cta-links">
-          <li><a href="internal-audit.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l8 3v6c0 5-3.4 8.4-8 9-4.6-.6-8-4-8-9V6l8-3z"/><path d="M9 12l2 2 4-4"/></svg><span><b>Internal Audit &amp; Risk</b><small>Four ways to work together, nine process areas</small></span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></li>
-          <li><a href="automation.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg><span><b>Process Automation &amp; AI</b><small>Examples, dashboards and training</small></span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></li>
-          <li><a href="erp-solutions.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2l10 5-10 5L2 7l10-5z"/><path d="M2 17l10 5 10-5M2 12l10 5 10-5"/></svg><span><b>Custom ERP Tools</b><small>Modules, controls and a before / after view</small></span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></li>
-        </ul>
+        <div class="qres" id="qres"></div>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
+  <section style="padding-top:0">
+    <div class="wrap">
+      <div class="sec-head reveal"><div class="eyebrow">Ways to engage</div><h2>Choose the model that fits how you work.</h2><p>Start small with one project, or hand over an entire function — the quality and senior attention stay the same.</p></div>
+      <div class="models reveal">
+        <div class="model"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M3 9h18M8 2v4M16 2v4"/></svg></div><h3>Project-based</h3><p>A defined piece of work with a clear scope, timeline and fee.</p><ul><li>Audits and due diligence</li><li>Automation builds and ERP modules</li><li>Set-ups, clean-ups and trainings</li></ul></div>
+        <div class="model"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12a9 9 0 11-3-6.7"/><path d="M21 4v5h-5"/></svg></div><h3>Monthly retainer</h3><p>An ongoing function run by SDDA, month after month.</p><ul><li>Accounting and MIS</li><li>Tax and ROC compliance</li><li>Internal audit and Virtual CFO</li></ul></div>
+        <div class="model"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="8" r="3.5"/><path d="M2.5 20c.8-3.5 3.4-5.5 6.5-5.5s5.7 2 6.5 5.5"/><path d="M16 4.5a3.5 3.5 0 010 7M18.5 14.8c1.6.8 2.6 2.6 3 5.2"/></svg></div><h3>Deputed staff</h3><p>An SDDA professional working from your office, backed by our team.</p><ul><li>On-site accounting and MIS support</li><li>Periodic senior review visits</li><li>Continuity when your staff change</li></ul></div>
+      </div>
+    </div>
+  </section>
+
+  <section style="padding-top:0">
+    <div class="wrap two-col">
+      <div class="reveal"><div class="eyebrow">Industries served</div><h2 style="font-size:32px;margin:10px 0 22px">Experience across sectors.</h2>
+        <div class="ind"><span>Logistics</span><span>Education</span><span>Media</span><span>FMCG</span><span>Petroleum</span><span>Manufacturing</span><span>Retail</span><span>Trading</span><span>Startups</span><span>Professional services</span></div></div>
+      <div class="reveal"><div class="eyebrow">Systems we work on</div><h2 style="font-size:32px;margin:10px 0 22px">Your software, not ours.</h2>
+        <div class="ind sys"><span>Tally Prime</span><span>SAP</span><span>Oracle</span><span>Navision</span><span>Busy</span><span>Zoho Books</span><span>QuickBooks</span><span>Xero</span><span>Excel & VBA</span><span>Power Query</span><span>Power BI</span><span>Python</span></div></div>
+    </div>
+  </section>
+
+  <!-- REVIEWS: replace the placeholders with real client reviews (with the client's permission).
+       Do not publish made-up reviews. Check ICAI guidelines on testimonials before going live. -->
+  <section style="padding-top:0" id="reviews">
+    <div class="wrap">
+      <div class="sec-head reveal"><div class="eyebrow">Reviews</div><h2>What our clients say.</h2></div>
+      <div class="reviews reveal">
+        <figure class="review"><span class="q" aria-hidden="true">“</span><blockquote>[Client review to be added: for example, about an internal audit engagement.]</blockquote><figcaption><span class="av"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="8" r="4"/><path d="M4 21a8 8 0 0116 0"/></svg></span><span><b>[Client name / role]</b><small>[Industry · City]</small></span></figcaption></figure>
+        <figure class="review"><span class="q" aria-hidden="true">“</span><blockquote>[Client review to be added: for example, about an automation tool or dashboard.]</blockquote><figcaption><span class="av"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="8" r="4"/><path d="M4 21a8 8 0 0116 0"/></svg></span><span><b>[Client name / role]</b><small>[Industry · City]</small></span></figcaption></figure>
+        <figure class="review"><span class="q" aria-hidden="true">“</span><blockquote>[Client review to be added: for example, about a custom ERP build.]</blockquote><figcaption><span class="av"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="8" r="4"/><path d="M4 21a8 8 0 0116 0"/></svg></span><span><b>[Client name / role]</b><small>[Industry · City]</small></span></figcaption></figure>
+      </div>
+    </div>
+  </section>
+
+  <section style="padding-top:0">
+    <div class="wrap reveal">
+      <div class="cta-band">
+        <div><h3>The first conversation costs nothing.</h3><p>Walk us through where it hurts today — we'll come back with what it takes to fix.</p></div>
+        <button class="btn btn-gold" data-go="contact">Start the conversation →</button>
+      </div>
+    </div>
+  </section>
+</div>
+
+<!-- ================= SERVICES INDEX ================= -->
+<div class="view" id="v-services">
+  <section class="sd-hero"><div class="wrap">
+    <div class="crumb"><a data-go="home">Home</a> / Services</div>
+    <h1>Ten services. One partner for finance, compliance and automation.</h1>
+    <p>From the books you close each month to the controls that protect them and the tools that take the effort out — open any service for a detailed walkthrough.</p>
+  </div></section>
+  <section><div class="wrap">
+    <div class="filters" id="filters2"></div>
+    <div class="sgrid" id="sgrid2"></div>
+  </div></section>
+</div>
+
+<!-- ================= SERVICE DETAIL ================= -->
+<div class="view" id="v-service"></div>
+
+<!-- ================= ABOUT ================= -->
+<div class="view" id="v-about">
+  <section class="sd-hero"><div class="wrap">
+    <div class="crumb"><a data-go="home">Home</a> / About</div>
+    <h1>Every business deserves enterprise-grade controls.</h1>
+    <p>SDDA was founded on a simple conviction: regardless of size, every business deserves strong controls, decision-ready reporting and seamless compliance — delivered with the agility and care of a partner who truly understands it.</p>
+  </div></section>
+  <section><div class="wrap">
+    <div class="about-grid">
+      <div class="reveal">
+        <div class="eyebrow">Who we are</div>
+        <h2 style="font-size:36px;margin:10px 0 16px">A Chartered Accountancy firm in Mumbai and Pune.</h2>
+        <p style="color:#33433b;font-size:16.5px;margin-bottom:14px">Shreya D. Dave & Associates (SDDA) brings together Chartered Accountants, Company Secretaries, MBAs and Excel & automation specialists. That mix matters: the person reviewing your controls also knows how to build the tool that runs them, and the person filing your returns understands the business decision behind each number.</p>
+        <p style="color:#33433b;font-size:16.5px">We work as an extension of your team — month by month, cycle by cycle — so issues are fixed at the root and do not recur.</p>
+        <div class="team-mix">
+          <div><b>CA</b>Chartered Accountants</div>
+          <div><b>CS</b>Company Secretaries</div>
+          <div><b>MBA</b>Business & finance</div>
+          <div><b>XL</b>Excel & automation</div>
+        </div>
+      </div>
+      <div class="founder reveal">
+        <div class="eyebrow">Founder</div>
+        <h3 style="margin-top:8px">CA & CS Shreya D. Dave</h3>
+        <div class="role">Founder · Chartered Accountant & Company Secretary</div>
+        <p style="font-size:15px">A career of over a decade in internal audit, risk consulting and financial controls, with reviews led across India, Vietnam, Russia and Malaysia.</p>
+        <ul>
+          <li>Risk consulting at KPMG and EY</li>
+          <li>In-house risk and controls at British Petroleum</li>
+          <li>Financial Controller at Deutsche Bank Group</li>
+          <li>Led multi-location, multi-process reviews end to end and mentored the teams that ran them</li>
+        </ul>
+      </div>
+    </div>
+    <div class="vm reveal">
+      <div><div class="eyebrow">Our vision</div><p>To empower founders and leadership teams to build and scale with confidence, as their trusted partner for finance, compliance and automation, so they can stay focused on what they do best.</p></div>
+      <div><div class="eyebrow">Our mission</div><p>To bring clarity, control and efficiency to every business we serve, combining professional expertise with smart automation to deliver accurate, timely, decision-ready support that scales as our clients grow.</p></div>
+    </div>
+  </div></section>
+  <section class="dark"><div class="wrap">
+    <div class="sec-head reveal"><div class="eyebrow">Our values in practice</div><h2>How we show up for clients.</h2></div>
+    <div class="apart" id="apart2"></div>
+  </div></section>
+</div>
+
+<!-- ================= CONTACT ================= -->
+<div class="view" id="v-contact">
+  <section class="sd-hero"><div class="wrap">
+    <div class="crumb"><a data-go="home">Home</a> / Contact</div>
+    <h1>Name one problem. We'll scope it and tell you what it takes.</h1>
+    <p>Share what you need — a process to automate, an audit to plan, a compliance backlog to clear — and we'll come back with a written scope.</p>
+  </div></section>
+  <section><div class="wrap contact-grid">
+    <div class="cinfo reveal">
+      <div><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 21s-7-6.2-7-12a7 7 0 0114 0c0 5.8-7 12-7 12z"/><circle cx="12" cy="9" r="2.5"/></svg><div><b>Mumbai office</b><span>Office No. 105, Orion Business Park, Natakwala Lane, Borivali West, Mumbai 400092</span></div></div>
+      <div><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 21s-7-6.2-7-12a7 7 0 0114 0c0 5.8-7 12-7 12z"/><circle cx="12" cy="9" r="2.5"/></svg><div><b>Pune office</b><span>Serving clients across Pune and Western Maharashtra</span></div></div>
+      <div><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg><div><b>Email</b><span><a href="mailto:shreya.dave@sdda.co.in">shreya.dave@sdda.co.in</a><br><a href="mailto:info@sdda.co.in">info@sdda.co.in</a></span></div></div>
+      <div><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 005 5L15 13l5 2v4a2 2 0 01-2 2A16 16 0 013 6a2 2 0 012-2"/></svg><div><b>Phone</b><span><a href="tel:+919870061873">+91 98700 61873</a></span></div></div>
+    </div>
+    <form id="cform" class="reveal">
+      <h3 style="font-size:24px">Tell us about your requirement</h3>
+      <div class="row"><label>Name<input required name="name" placeholder="Your name"></label><label>Company<input name="company" placeholder="Company name"></label></div>
+      <div class="row"><label>Email<input required type="email" name="email" placeholder="you@company.com"></label><label>Phone<input name="phone" placeholder="+91"></label></div>
+      <label>Services you're interested in<div class="svc-pick" id="svcpick"></div></label>
+      <label>What would you like help with?<textarea name="msg" rows="4" placeholder="e.g. We want our GST ITC reconciliation automated and a quarterly internal audit of procure-to-pay."></textarea></label>
+      <button class="btn btn-primary" type="submit" style="justify-self:start">Prepare my enquiry →</button>
+      <div class="sent" id="sent"><b>Your enquiry is ready.</b> This page cannot send email itself — copy the text below and send it to <b>shreya.dave@sdda.co.in</b>, or call <b>+91 98700 61873</b>.<pre id="sentText"></pre><div class="sent-actions"><a class="btn btn-primary" id="mailBtn" href="mailto:shreya.dave@sdda.co.in" style="padding:9px 16px;font-size:14px">Open in email app</a><button type="button" class="btn btn-gold" id="copyBtn" style="padding:9px 16px;font-size:14px">Copy enquiry</button></div></div>
+    </form>
+  </div></section>
+</div>
 </main>
-<footer class="site-footer">
+
+<footer>
   <div class="wrap">
-    <div class="footer-grid">
+    <div class="fgrid">
       <div>
-        <a class="brand" href="index.html"><svg class="brand-mark" viewBox="0 0 179 253" aria-hidden="true"><path d="M0 0H116L179 126.5L116 253H0Z" fill="#12524a"/><path d="M0 0H99L162 126.5L99 253H0Z" fill="#3e8549"/><path d="M0 0H79L142 126.5L79 253H0Z" fill="#e4f2b8"/><path d="M0 0H69L132 126.5L69 253H0Z" fill="#a9ce48"/></svg><span class="brand-text"><span class="brand-name">SDDA</span><span class="brand-sub">Chartered Accountants · Est. 2022</span></span></a>
-        <p class="mt-2">A firm of Chartered Accountants in Mumbai and Pune: accounting, tax, audit and compliance, with specialised practices in internal audit, process automation and custom ERP tools.</p>
+        <div class="brand" style="margin-bottom:14px"><svg width="40" height="33" viewBox="0 0 92 76"><path d="M4 4l22 34L4 72h16l22-34L20 4z" fill="#3f9a5c"/><path d="M28 4l22 34-22 34h16l22-34L44 4z" fill="#7fb54a"/><path d="M52 4l22 34-22 34h16l22-34L68 4z" fill="#c9e27a"/></svg><div class="brand-t"><b style="color:#fff">Shreya D. Dave & Associates</b><span style="color:#a9c2a0">Chartered Accountants</span></div></div>
+        <p>Partnering with business for finance, compliance and automation.</p>
       </div>
-      <div>
-        <h4>Focus areas</h4>
-        <ul>
-          <li><a href="internal-audit.html">Internal Audit &amp; Risk</a></li>
-          <li><a href="automation.html">Process Automation</a></li>
-          <li><a href="erp-solutions.html">Custom ERP Tools</a></li>
-          <li><a href="automation.html#dashboards">Power BI Dashboards</a></li>
-          <li><a href="automation.html#training">Excel &amp; AI Training</a></li>
-        </ul>
-      </div>
-      <div>
-        <h4>Firm</h4>
-        <ul>
-          <li><a href="about.html">About us</a></li>
-          <li><a href="about.html#services">All services</a></li>
-          <li><a href="contact.html">Contact</a></li>
-        </ul>
-      </div>
-      <div>
-        <h4>Offices</h4>
-        <ul>
-          <li>Office No. 105, Orion Business Park, Natakwala Lane, Borivali West, Mumbai 400092</li>
-          <li>Pune</li>
-          <li><a href="mailto:info@sdda.co.in">info@sdda.co.in</a></li>
-          <li><a href="tel:+919870061873">+91 98700 61873</a></li>
-        </ul>
-      </div>
+      <div><h4>Compliance</h4><div id="f1"></div></div>
+      <div><h4>Advisory & Tech</h4><div id="f2"></div></div>
+      <div><h4>Reach us</h4><p>Office No. 105, Orion Business Park, Natakwala Lane, Borivali West, Mumbai 400092</p><p style="margin-top:8px">shreya.dave@sdda.co.in<br>+91 98700 61873</p></div>
     </div>
-    <div class="footer-bottom">
-      <span>© <span data-year>2026</span> Shreya D. Dave &amp; Associates, Chartered Accountants. All rights reserved.</span>
-      <button type="button" data-open-disclaimer>Disclaimer</button>
-    </div>
+    <div class="fbot"><span>© Shreya D. Dave & Associates · Chartered Accountants · Mumbai | Pune</span><span>Partnering with business · <button type="button" data-open-disclaimer>Disclaimer</button></span></div>
   </div>
 </footer>
-
 <div class="disclaimer" id="disclaimer" role="dialog" aria-modal="true" aria-labelledby="disclaimer-title">
   <div class="disclaimer-box">
     <h3 id="disclaimer-title">Disclaimer</h3>
@@ -284,9 +280,11 @@
       <li>nothing on this website is professional advice. Please consult us before acting on anything here;</li>
       <li>the examples and figures shown are illustrative only and do not relate to any client.</li>
     </ul>
-    <div class="btn-row mt-3"><button class="btn btn--primary" type="button" data-agree>I agree</button></div>
+    <button class="btn btn-primary" type="button" data-agree>I agree</button>
   </div>
 </div>
-<script src="assets/js/main.js"></script>
+<button class="totop" id="totop" aria-label="Back to top"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 15l6-6 6 6"/></svg></button>
+
+<script src="assets/js/site.js"></script>
 </body>
 </html>
