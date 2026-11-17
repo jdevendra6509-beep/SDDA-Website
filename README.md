@@ -1,3 +1,4 @@
+
 # Shreya D. Dave & Associates — Firm website
 
 Static website for the firm (Chartered Accountants, Mumbai · Pune). There is no build step: open `index.html` in a browser, or deploy the folder to any static host (Vercel, GitHub Pages, Netlify, cPanel).
