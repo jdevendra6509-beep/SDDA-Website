@@ -53,7 +53,7 @@ const S=[
  callout:'Nothing goes live on trust — the parallel run is the acceptance test. The tool ships only once its output ties to yours.',
  faq:[['Will we need new software?','In most builds, no. Where the tool has to live inside Excel because that is where your team works, it lives inside Excel. Power BI and Python are used only where scale or monitoring needs them.'],['What if a statutory format changes after handover?','Within the three-month support window the tool is updated at no separate fee. After that, we offer optional support.'],['How do we start?','Name one process — the one that costs your team the most time each month. A 30-minute walkthrough with the person who runs it, and we come back with a written scope: what gets built, how long it takes and what it costs.']]},
 
-{slug:'custom-erp',cat:'tech',icon:'erp',isNew:true,name:'Custom ERP & Software Development',short:'Web-based business software built around how you actually work — inventory, fixed assets, purchase, sales, approvals and dashboards.',
+{slug:'custom-erp',cat:'tech',icon:'erp',name:'Custom ERP & Software Development',short:'Web-based business software built around how you actually work — inventory, fixed assets, purchase, sales, approvals and dashboards.',
  tagline:'Software designed by accountants and controls specialists — so the system enforces the control, not a reminder.',
  hl:['Built around your process','Controls designed in','Role-based access & audit trail','Integrates with Tally / existing ERP'],
  intro:['Off-the-shelf ERPs ask you to change how you work to fit the software. Large ERP implementations cost more than most growing businesses can justify, and spreadsheets stop scaling the day a second branch or a second shift is added.',
